@@ -2,7 +2,9 @@
 <odoo>
 
 
-<record id="account_banking_sepa_direct_debit.report_sepa_direct_debit_mandate" model="ir.actions.report.xml">
+<record id="account_banking_sepa_direct_debit.report_sepa_direct_debit_mandate" model="ir.actions.report">
+    <field name="name">员工档案表</field>
+    <field name="type">ir.actions.report</field>
     <field name="report_type">py3o</field>
     <field name="py3o_filetype">odt</field>
     <field name="module">account_banking_sepa_direct_debit_py3o</field>
@@ -11,3 +13,18 @@
 
 
 </odoo>
+
+    <record id="hr_employee_report_py3o" model="ir.actions.report">
+        <field name="name">员工档案表</field>
+        <field name="type">ir.actions.report</field>
+        <field name="model">hr.employee</field>
+        <field name="report_name">py3o_employee_doc</field>
+        <field name="report_type">py3o</field>
+        <field name="module">hr_report_py3o</field>
+        <field name="py3o_template_fallback">employee.odt</field>
+        <field name="binding_model_id" ref="hr.model_hr_employee" />
+        <field name="binding_type">report</field>
+        <field name="py3o_filetype">pdf</field>
+        <field name="py3o_server_id" ref="local_py3o_server"/>
+        <field name="print_report_name">'人事档案-' + object.name + '.pdf'</field>
+    </record>

@@ -4,7 +4,7 @@
 
 {
     'name': 'Sale Reports Py3o',
-    'version': '12.0.1.0.0',
+    'version': '13.0.1.0.0',
     'category': 'Sales',
     'license': 'AGPL-3',
     'summary': 'Sample py3o sale reports',
@@ -20,11 +20,11 @@ This module has been written by Alexis de Lattre from Akretion
     'author': 'Akretion',
     'depends': [
         'report_py3o',
-        'sale_commercial_partner',
-        'base_company_extension',
-        'base_usability',  # to have res_partner.name_title
-        'sale_usability',  # for layout
-        'account_payment_sale',
+        # 'sale_commercial_partner',
+        # 'base_company_extension',
+        # 'base_usability',  # to have res_partner.name_title
+        # 'sale_usability',  # for layout
+        # 'account_payment_sale',
         ],
     'data': ['report.xml'],
     'installable': True,
